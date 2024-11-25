@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Cambiar height por min-height */
+  overflow: auto; /* Habilita el scroll si es necesario */
+}
+
+  
+  .header {
+    background-color: #333;
+    padding: 10px;
+    color: white;
+  }
+  
+  .navbar a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* ProductList */
+  
+
+  .product-list {
+    padding: 20px;
+  }
+  
+  .products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .product {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+
+  /* AdminPanel */
+  .admin-panel {
+    padding: 20px;
+  }
+  
+  .admin-panel h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .admin-panel form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto 30px;
+  }
+  
+  .admin-panel input,
+  .admin-panel textarea,
+  .admin-panel button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .admin-panel button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .admin-panel button:hover {
+    background-color: #555;
+  }
+  
+  .admin-panel ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .admin-panel ul li {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+
+/* Login/register */
+
+.form-container {
+  max-width: 600px; /* Aumenta el ancho del cuadro */
+  margin: 50px auto; /* Centra vertical y horizontalmente */
+  background-color: #f9f9f9;
+  padding: 0 20px; /* Añade espacio de 20px a los lados */
+  padding: 30px; /* Aumenta el espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra más notoria */
+  text-align: center;
+}
+
+.form-container h1 {
+  margin-bottom: 20px;
+  font-size: 28px; /* Título más grande */
+  color: #111111;
+  font-weight: bold; /* Resaltado */
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaciado entre elementos */
+}
+
+.form-container label {
+  font-size: 16px;
+  color: #111111;
+  font-weight: 500;
+}
+
+.form-container input, 
+.form-container select, 
+.form-container button {
+  width: 100%;
+  padding: 15px; /* Más alto */
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px; /* Fuente más grande */
+}
+
+.form-container button {
+  background-color: #111111;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-container button:hover {
+  background-color: #333333;
+  transform: scale(1.05); /* Efecto de zoom */
+}
+
+.form-container p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666666;
+}
+
+.form-container a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.form-container a:hover {
+  text-decoration: underline;
+}
+
+/* Container for Product List */
+.product-list {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.product-list h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Product Grid */
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Individual Product Card */
+.product {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Image */
+.product img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+/* Product Name */
+.product h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #111;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Product Description */
+.product p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Product Price */
+.product .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Add to Cart Button */
+.product button {
+  background-color: #111;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product button:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-list {
+    padding: 10px;
+  }
+
+  .product {
+    padding: 15px;
+  }
+
+  .product img {
+    max-height: 150px;
+  }
+
+  .product h3 {
+    font-size: 16px;
+  }
+
+  .product p {
+    font-size: 12px;
+  }
+
+  .product .price {
+    font-size: 14px;
+  }
+
+  .product button {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin: 0 10px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Product List */
+.product-list {
+  padding: 40px 20px; /* Espaciado interno */
+  margin-bottom: 50px; /* Espaciado externo */
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px; /* Espaciado entre productos */
+}
+.product-card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+.product-card:hover {
+  transform: scale(1.05); /* Efecto al pasar el mouse */
+}
+
+.product-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+  gap: 50px; /* Espaciado entre los productos */
+}
+.product {
+  text-align: center;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Fondo blanco para los productos */
+  border-radius: 5px; /* Esquinas redondeadas */
+}
+
+.products h2 {
+  color: #111111;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+
+/* Benefits */
+.benefits-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  margin: 50px 0;
+}
+.benefit {
+  text-align: center;
+  flex: 1;
+  margin: 0 20px;
+}
+.benefit img {
+  max-width: 100px;
+  margin-bottom: 15px;
+}
+.benefit h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.benefit p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Blogs */
+.blog-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+.blog {
+  flex-basis: calc(33.3% - 30px);
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.blog img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+.blog h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.blog p {
+  overflow: visible; /* Asegura que el texto no se corte */
+  height: auto; /* Ajusta la altura automáticamente */
+  white-space: normal; /* Permite múltiples líneas */
+  color: #111111; /* Color negro para el texto */
+}
+
+
+.page-header {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary:hover {
+  background-color: #333;
+}
+
+.product img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* Asegura que la imagen mantenga proporciones sin deformarse */
+  border-radius: 5px; /* Opcional: redondea las esquinas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: agrega una sombra ligera */
+}
